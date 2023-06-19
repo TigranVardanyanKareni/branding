@@ -1,0 +1,139 @@
+.catalog {
+  padding-top: 70px;
+  padding-bottom: 90px;
+  @media (max-width: 767.98px) {
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+  // .catalog__container
+
+  &__container {
+  }
+
+  // .catalog__title
+
+  &__title {
+    text-align: center;
+    margin-bottom: 80px;
+    @media(max-width:576.98px){
+      text-align: left;
+    }
+  }
+
+  // .catalog__subtitle
+
+  &__subtitle {
+  }
+
+  // .catalog__list
+
+  &__list {
+    padding: 0;
+    list-style: none;
+    @media (max-width: 767.98px) {
+      display: flex;
+      overflow-x: auto;
+    }
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 100px;
+      grid-row-gap: 130px;
+    }
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 45px;
+    }
+  }
+
+  // .catalog__item
+
+  &__item {
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #202020;
+      // transform-origin: right;
+      // transform: skew(0deg, 20deg);
+    }
+    @media(max-width:767.98px){
+      flex: 0 0 60%;
+      &:not(:last-child){
+        margin-right: 100px;
+      }
+    }
+    @media(max-width:576.98px){
+      flex: 0 0 60%;
+      &:not(:last-child){
+        margin-right: 50px;
+      }
+    }
+    @media(max-width:479.98px){
+      padding: 20px;
+      flex: 0 0 75%;
+      &:not(:last-child){
+        margin-right: 20px;
+      }
+    }
+  }
+
+  // .catalog__item-content
+
+  &__item-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    max-width: 200px;
+    margin: 0px auto;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  // .catalog__item-title
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #f0f0f0;
+    @media(max-width:767.98px){
+      font-size: 24px;
+    }
+  }
+
+  // .catalog__item-text
+
+  &__item-text {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--yellow);
+    text-align: left;
+  }
+
+  // .catalog__item-img
+
+  &__item-img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 12px;
+    @media(max-width:479.98px){
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
